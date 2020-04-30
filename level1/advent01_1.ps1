@@ -1,13 +1,13 @@
-﻿$travel = Get-Content "~/DEV/4. adventofcode/level1/advent01.txt"
-$floors = $travel.ToCharArray(); $santa = 0
+﻿$floors = $(Get-Content "advent01.txt").ToCharArray()
+$santa = 0
 
-ForEach ($_  in $floors)
+ForEach ($floor in $floors)
 {
-    if ($_ -eq '(')
+    if ($floor -eq '(')
     {
         $santa++ 
     }
-    elseif ($_ -eq ')')
+    elseif ($floor -eq ')')
     {
         $santa-- 
     }
